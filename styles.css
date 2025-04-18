@@ -210,3 +210,51 @@ body {
     height: 100%;
     object-fit: contain;
   }
+
+  @layer utilities {
+    .textured-blue-clip {
+      /* Combine the desired blue color with a grain texture SVG */
+      /* Using medium-grain for a bit more visibility than fine-grain */
+      background-image: url('public/svg/medium-grain.svg'), linear-gradient(to bottom, #2563eb, #2563eb);
+      background-size: 150px 150px, auto; /* Adjust grain size as needed */
+      background-repeat: repeat, no-repeat;
+      background-position: center;
+      /* Blend mode - 'overlay', 'soft-light', or 'multiply' might work. 'overlay' is often good for texture */
+      background-blend-mode: overlay;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent; /* Make the actual text color transparent */
+    }
+  
+    /* Fallback for browsers that don't support background-clip: text */
+    @supports not ((-webkit-background-clip: text) or (background-clip: text)) {
+      .textured-blue-clip {
+        color: #2563eb;
+        background-image: none;
+      }
+    }
+  }
+
+  .white-box {
+    background-color: white;
+    border: 1px solid #ccc;
+    width: 300px;
+    font-weight: bold;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 20px auto 0;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  .white-box p {
+    margin: 0;
+    font-size: 3rem;
+  }
+
+  .textured-blue-clip {
+    background: url('public/svg/medium-grain.svg'), #2563eb;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
