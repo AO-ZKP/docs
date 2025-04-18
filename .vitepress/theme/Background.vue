@@ -1,0 +1,98 @@
+<template>
+    <div class="background">
+      <div class="base"></div>
+      <div class="radial-gradient"></div>
+      <div class="grain coarse"></div>
+      <div class="grain medium"></div>
+      <div class="grain fine"></div>
+      <div class="variation"></div>
+      <div class="adjustment"></div>
+    </div>
+  </template>
+  
+  <style>
+  .background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -10;
+    overflow: hidden;
+  }
+  
+  .base {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #2563eb;
+  }
+  
+  .radial-gradient {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.2;
+    background-image: radial-gradient(circle at 50% 50%, rgba(96, 165, 250, 0.4) 0%, transparent 70%);
+  }
+  
+  .grain.coarse {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('/svg/coarse-grain.svg');
+    background-size: 180px 180px;
+    mix-blend-mode: overlay;
+    opacity: 0.7;
+  }
+  
+  .grain.medium {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('/svg/medium-grain.svg');
+    background-size: 120px 120px;
+    mix-blend-mode: soft-light;
+    opacity: 0.5;
+  }
+  
+  .grain.fine {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('/svg/fine-grain.svg');
+    background-size: 100px 100px;
+    mix-blend-mode: overlay;
+    opacity: 0.4;
+  }
+  
+  .variation {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom right, rgba(56, 189, 248, 0.2), transparent, rgba(37, 99, 235, 0.2));
+    mix-blend-mode: overlay;
+  }
+  
+  .adjustment {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(125, 211, 252, 0.06);
+    mix-blend-mode: soft-light;
+  }
+  </style>

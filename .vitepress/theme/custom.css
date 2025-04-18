@@ -1,0 +1,87 @@
+/* Load custom font */
+@font-face {
+    font-family: 'C059';
+    src: url('/fonts/C059-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  /* Apply font globally */
+  html, body, h1, h2, h3, h4, h5, h6, p, a, code, pre, span, div, button, input, textarea {
+    font-family: 'C059', serif !important;
+    font-weight: bold !important;
+  }
+  
+  /* Override VitePress default styles */
+  :root {
+    --vp-c-bg: transparent;
+    --vp-c-bg-alt: rgba(0, 0, 0, 0.2);
+    --vp-c-bg-elv: rgba(0, 0, 0, 0.3);
+    --vp-c-bg-soft: rgba(0, 0, 0, 0.2);
+    --vp-nav-bg-color: transparent;
+    --vp-sidebar-bg-color: rgba(0, 0, 0, 0.2);
+    --vp-c-text-1: #ffffff;
+    --vp-c-text-2: rgba(255, 255, 255, 0.8);
+    --vp-c-text-3: rgba(255, 255, 255, 0.6);
+    --vp-code-block-bg: rgba(0, 0, 0, 0.3);
+    --vp-code-color: #ffffff;
+    --vp-c-brand-1: #60a5fa; /* Lighter blue for links/buttons */
+    --vp-c-brand-2: #3b82f6;
+    --vp-c-brand-3: #2563eb;
+    --vp-button-brand-text: #ffffff;
+    --vp-button-brand-bg: #2563eb;
+    --vp-button-brand-hover-bg: #3b82f6;
+    --vp-button-alt-bg: rgba(0, 0, 0, 0.3);
+    --vp-button-alt-text: #ffffff;
+    --vp-button-alt-hover-bg: rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Ensure navbar and sidebar text is white */
+  .VPNav, .VPSidebar, .VPNavBar, .VPSidebarNav, .VPLink {
+    color: #ffffff !important;
+  }
+  
+  /* Style custom containers to mimic white-box */
+  .vp-custom-block {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .vp-custom-block p, .vp-custom-block h1, .vp-custom-block h2, .vp-custom-block h3 {
+    color: transparent !important;
+    background: url('/svg/medium-grain.svg'), #2563eb;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+  
+  /* Textured blue text for white backgrounds */
+  .textured-blue-clip {
+    background: url('/svg/medium-grain.svg'), #2563eb;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  /* Fallback for unsupported browsers */
+  @supports not ((-webkit-background-clip: text) or (background-clip: text)) {
+    .textured-blue-clip, .vp-custom-block p, .vp-custom-block h1, .vp-custom-block h2, .vp-custom-block h3 {
+      color: #2563eb !important;
+      background-image: none;
+    }
+  }
+  
+  /* Ensure code blocks have readable text */
+  .vp-code, .vp-code-block, pre, code {
+    color: #ffffff !important;
+    background-color: rgba(0, 0, 0, 0.3) !important;
+  }
+  
+  /* Buttons */
+  .VPButton {
+    font-family: 'C059', serif !important;
+    font-weight: bold !important;
+  }
