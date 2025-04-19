@@ -2,17 +2,16 @@
 import { h } from 'vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
-import Background from './Background.vue'
-import Bunny from './Bunny.vue'
-import './custom.css'
+import './style.css'
 
 export default {
   extends: DefaultTheme,
-  Layout() {
-    return h('div', { class: 'custom-layout' }, [
-      h(Background),
-      h(DefaultTheme.Layout),
-      h(Bunny)
-    ])
+  Layout: () => {
+    return h(DefaultTheme.Layout, null, {
+      // https://vitepress.dev/guide/extending-default-theme#layout-slots
+    })
+  },
+  enhanceApp({ app, router, siteData }) {
+    // ...
   }
-}
+} satisfies Theme
