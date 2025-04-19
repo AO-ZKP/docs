@@ -5,21 +5,17 @@ layout: home
 hero:
   name: "A0 Labs Docs"
   text: "Docs for A0 Labs"
-  tagline: My great project tagline
-  actions:
-    - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
+  tagline: ZK on AO
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: AO
+    details: Development Container for A0 Labs
+    link: /ao
+  - title: AOS
+    details: Lua Source Code and Testing Framework
+    link: /aos
+  - title: Lua Rust Starter
+    details: Starter Template for Lua and Rust
+    link: /lua-rust-starter
 ---
 
