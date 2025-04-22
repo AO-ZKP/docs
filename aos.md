@@ -21,7 +21,7 @@ docker run --platform linux/amd64 -e DEBUG=1 -v ${PWD}:/src p3rmaw3b/ao ao-build
 ```
 To generate a process.wasm module and test it
 
-
+---
 Refer to the official the docs: [https://hackmd.io/@ao-docs/H16LENGcA](https://hackmd.io/@ao-docs/H16LENGcA)
 
 On How to setup your project structure
