@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NFT Bridge by A0 Labs</title>
   <link rel="stylesheet" href="styles.css" />
+  <!-- Added Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
   <div class="background">
@@ -20,18 +22,48 @@
   <main>
     <div class="content">
         <div class="title-container">
-            <h1 class="main-title">NFT Bridge</h1>
+            <h1 class="main-title">A0 Labs</h1>
           </div>
-          <div class="white-box">
-            <p class="textured-blue-clip">A0 Labs</p>
-          </div>
-          <div class="description-container">
-            <p class="description-text">Demo to Show NFT Bridge Functionality</p>
+          
+          <!-- New Social Links Section -->
+          <div class="social-links">
+            <a href="https://discord.gg/zaGHZgtyyw" target="_blank" class="social-link">
+              <i class="fab fa-discord"></i>
+              <span>Discord</span>
+            </a>
+            <a href="https://x.com/a0labs" target="_blank" class="social-link">
+              <i class="fab fa-x"></i>
+              <span>Twitter</span>
+            </a>
+            <a href="https://docs_a0labs.ar.io" target="_blank" class="social-link">
+              <i class="fas fa-book"></i>
+              <span>Docs</span>
+            </a>
           </div>
     </div>
     <div class="bunny">
       <img src="public/bunny.png" alt="A0 Labs Bunny" />
     </div>
   </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const bunny = document.querySelector('.bunny');
+      
+      bunny.addEventListener('click', function() {
+        // Prevent multiple animations if clicked rapidly
+        if (!bunny.classList.contains('jumping')) {
+          // Add the jumping class
+          bunny.classList.add('jumping');
+          
+          // Remove the class after the animation completes
+          setTimeout(function() {
+            bunny.classList.remove('jumping');
+          }, 500); // 500ms = animation duration
+        }
+      });
+    });
+  </script>
+  
 </body>
 </html>
