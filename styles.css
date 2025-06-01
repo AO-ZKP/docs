@@ -1,3 +1,4 @@
+@import "tailwindcss";
 /* Ensure no scrollbars and disable scrolling */
 body {
     overflow: hidden;
